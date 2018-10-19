@@ -1,4 +1,4 @@
-# Docker Cloud Tools Image - Automated build repository
+# Cloud Tools Image - Automated build repository
 
 ## Description
 
@@ -16,16 +16,32 @@ Cloud tools and SDKs:
 * OCI CLI and Python SDK (latest)
 
 Development tools:
+* build-essential package containing gcc, g++, make **(latest in Bionic)**
 * Python **(v3.6)**
 * Go **(go1.11.1)**
+* Git, Subversion and some editors like vim, nano, mcedit
 
 Environment:
 * Bash with nice prompt coloring
 * Bash proxy management function (**proxy**) and terraform OCI environment variables setup function **setup_terraform_environ**
 
+**Attention**: Please have a look on the **Dockerfile** in order to see full list of software tools installed.
+
 ## Configuring shell proxy
 (please update)
+
 ## Configuring AWS access
-(please update)
+
+The easiest way to configure AWS Cloud access is to run [`aws configure`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration) which will prompt you for the setup.
+
+Also you can create the configure your **$HOME/.aws/credentials** file as described [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html):
+
 ## Configuring OCI access
-(please update)
+
+Configuring OCI console is done in a similar way like the AWS one by running [`oci setup config`](https://docs.cloud.oracle.com/iaas/Content/API/SDKDocs/cliinstall.htm). Variables configured in the **$HOME/.oci/config** must be the following in order for the terraform environment to be successfully configured:
+* user (with ocid value)
+* tenancy (with ocid value)
+* compartment (with ocid value)
+* fingerprint
+* key_file (with key path)
+* region
