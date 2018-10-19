@@ -1,0 +1,21 @@
+{
+  "terraform": {
+    "github_repo": "hashicorp/terraform",
+    "version": "v0.11.8"
+  },
+
+  "packer": {
+    "github_repo": "hashicorp/packer",
+    "version": "v1.3.1"
+  },
+
+  "ansible": {
+    "github_repo": "ansible/ansible",
+    "version": "v2.7.0"
+  },
+
+  "go": {
+    "github_repo": "golang/go",
+    "version": "go1.11.1"
+  }
+}
