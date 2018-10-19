@@ -30,8 +30,8 @@ RUN ln -s /usr/bin/pip3 /usr/bin/pip
 RUN pip install ipdb ipython
 
 
-# Installing AWS, OCI CLI
-RUN pip install oci-cli awscli
+# Installing AWS CLI and SDK, OCI CLI and SDK
+RUN pip install oci-cli awscli boto3
 
 
 # Installing Latest Ansible (v2.7.0)
