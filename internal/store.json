@@ -1,34 +1,29 @@
 {
-  "terraform": {
-    "github_repo": "hashicorp/terraform",
-    "version": "v0.11.8",
-    "template_key": "TERRAFORM_VERSION",
-    "remove_prefix": "v"
-  },
-
-  "packer": {
-    "github_repo": "hashicorp/packer",
-    "version": "v1.3.1",
-    "template_key": "PACKER_VERSION",
-    "remove_prefix": "v"
-  },
-
-  "ansible": {
-    "github_repo": "ansible/ansible",
-    "version": "v2.7.0",
-    "template_key": "ANSIBLE_VERSION"
-  },
-
-  "go": {
-    "github_repo": "golang/go",
-    "version": "go1.11.1",
-    "template_key": "GO_VERSION"
-  },
-
-  "docker-cloud-tools": {
-    "github_repo": "ccurcanu/docker-cloud-tools",
-    "version": "1",
-    "template_key": "DOCKERFILE_VERSION"
-  }
-
+    "terraform": {
+        "github_repo": "hashicorp/terraform",
+        "version": "v0.11.9",
+        "template_key": "TERRAFORM_VERSION",
+        "remove_prefix": "v"
+    },
+    "packer": {
+        "github_repo": "hashicorp/packer",
+        "version": "v1.3.1",
+        "template_key": "PACKER_VERSION",
+        "remove_prefix": "v"
+    },
+    "ansible": {
+        "github_repo": "ansible/ansible",
+        "version": "v2.7.0",
+        "template_key": "ANSIBLE_VERSION"
+    },
+    "go": {
+        "github_repo": "golang/go",
+        "version": "go1.11.1",
+        "template_key": "GO_VERSION"
+    },
+    "docker-cloud-tools": {
+        "github_repo": "ccurcanu/docker-cloud-tools",
+        "version": "2",
+        "template_key": "DOCKERFILE_VERSION"
+    }
 }
