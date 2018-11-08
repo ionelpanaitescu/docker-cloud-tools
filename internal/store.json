@@ -7,18 +7,18 @@
     },
     "packer": {
         "github_repo": "hashicorp/packer",
-        "version": "v1.3.1",
+        "version": "v1.3.2",
         "template_key": "PACKER_VERSION",
         "remove_prefix": "v"
     },
     "ansible": {
         "github_repo": "ansible/ansible",
-        "version": "v2.7.0",
+        "version": "v2.7.1",
         "template_key": "ANSIBLE_VERSION"
     },
     "go": {
         "github_repo": "golang/go",
-        "version": "go1.11.1",
+        "version": "go1.11.2",
         "template_key": "GO_VERSION"
     },
     "docker-cloud-tools": {
