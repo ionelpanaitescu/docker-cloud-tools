@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-LABEL version="3"
+LABEL version="4"
 
 ENV color_prompt yes
 ENV SHELL /bin/bash
@@ -16,8 +16,8 @@ RUN apt-get install build-essential -y
 RUN apt-get install git subversion -y
 
 
-# Installing latest GO (go1.11.1)
-RUN cd /tmp && echo "go1.11.1" > $HOME/.go_version &&  \
+# Installing latest GO (go1.11.2)
+RUN cd /tmp && echo "go1.11.2" > $HOME/.go_version &&  \
     wget -q https://storage.googleapis.com/golang/getgo/installer_linux && \
     chmod +x installer_linux && \
     ./installer_linux && \
@@ -36,9 +36,9 @@ RUN pip install ipdb ipython
 RUN pip install oci-cli awscli boto3
 
 
-# Installing Latest Ansible (v2.7.0)
+# Installing Latest Ansible (v2.7.1)
 RUN cd /tmp && \
-    git clone -q https://github.com/ansible/ansible.git -b "v2.7.0" --single-branch --depth 1 && \
+    git clone -q https://github.com/ansible/ansible.git -b "v2.7.1" --single-branch --depth 1 && \
     cd /tmp/ansible && python setup.py build install && rm -rf /tmp/ansible
 
 
@@ -48,12 +48,12 @@ RUN curl -s https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_l
     rm -f terraform_0.11.10_linux_amd64.zip
 
 
-# Installing Latest Hashicorp Packer (v1.3.1)
+# Installing Latest Hashicorp Packer (v1.3.2)
 RUN cd /tmp \
-    && wget -q https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip \
-    && unzip packer_1.3.1_linux_amd64.zip \
+    && wget -q https://releases.hashicorp.com/packer/1.3.2/packer_1.3.2_linux_amd64.zip \
+    && unzip packer_1.3.2_linux_amd64.zip \
     && mv packer /usr/local/bin/ \
-    && rm -rf packer_1.3.1_linux_amd64.zip
+    && rm -rf packer_1.3.2_linux_amd64.zip
 
 
 ENV LC_ALL C.UTF-8
