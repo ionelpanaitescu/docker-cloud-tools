@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-LABEL version="15"
+LABEL version="16"
 
 ENV color_prompt yes
 ENV SHELL /bin/bash
