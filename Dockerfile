@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-LABEL version="17"
+LABEL version="18"
 
 ENV color_prompt yes
 ENV SHELL /bin/bash
@@ -16,8 +16,8 @@ RUN apt-get install build-essential -y
 RUN apt-get install git subversion -y
 
 
-# Installing latest GO (go1.11.2)
-RUN cd /tmp && echo "go1.11.2" > $HOME/.go_version &&  \
+# Installing latest GO (go1.12.5)
+RUN cd /tmp && echo "go1.12.5" > $HOME/.go_version &&  \
     wget -q https://storage.googleapis.com/golang/getgo/installer_linux && \
     chmod +x installer_linux && \
     ./installer_linux && \
@@ -36,9 +36,9 @@ RUN pip install ipdb ipython
 RUN pip install oci-cli awscli boto3
 
 
-# Installing Latest Ansible (v2.7.1)
+# Installing Latest Ansible (v2.8.0)
 RUN cd /tmp && \
-    git clone -q https://github.com/ansible/ansible.git -b "v2.7.1" --single-branch --depth 1 && \
+    git clone -q https://github.com/ansible/ansible.git -b "v2.8.0" --single-branch --depth 1 && \
     cd /tmp/ansible && python setup.py build install && rm -rf /tmp/ansible
 
 

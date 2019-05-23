@@ -23,7 +23,7 @@
     },
     "docker-cloud-tools": {
         "github_repo": "ccurcanu/docker-cloud-tools",
-        "version": "17",
+        "version": "18",
         "template_key": "DOCKERFILE_VERSION"
     }
 }

@@ -11,14 +11,14 @@ This repository contains a Dockerfile that will build a **Ubuntu Bionic** (18.04
 Cloud tools and SDKs:
 * Terraform **(0.12.0)**
 * Packer **(1.4.1)**
-* Ansible **(v2.7.1)**
+* Ansible **(v2.8.0)**
 * AWS [CLI](https://aws.amazon.com/cli/) and Python [SDK - boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 * OCI [CLI](https://docs.cloud.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/) and Python [SDK](https://oracle-cloud-infrastructure-python-sdk.readthedocs.io/en/latest/)
 
 Development tools:
 * build-essential package containing gcc, g++, make **(latest in Bionic)**
 * Python **(v3.6)**
-* Go **(go1.11.2)**
+* Go **(go1.12.5)**
 * Git, Subversion and some editors like vim, nano, mcedit
 
 Environment:
@@ -82,4 +82,4 @@ Based on those the following shell environment variables are exported automatica
 * TF_VAR_private_key_path (terraform **private_key_path** variable)
 * TF_VAR_region (terraform **region** variable)
 
-Dockerfile has version 17.
+Dockerfile has version 18.
