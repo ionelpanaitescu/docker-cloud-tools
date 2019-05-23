@@ -8,7 +8,6 @@ ENV TERM xterm-color
 ENV NO_PROXY 127.0.0.1
 ENV no_proxy 127.0.0.1
 
-
 RUN apt-get update -q
 RUN apt-get install apt-utils locales iputils-ping iputils-arping iputils-tracepath -y
 RUN apt-get install mc nano vim curl wget -y
