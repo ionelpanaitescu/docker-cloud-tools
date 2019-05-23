@@ -13,12 +13,12 @@
     },
     "ansible": {
         "github_repo": "ansible/ansible",
-        "version": "v2.7.1",
+        "version": "v2.8.0",
         "template_key": "ANSIBLE_VERSION"
     },
     "go": {
         "github_repo": "golang/go",
-        "version": "go1.11.2",
+        "version": "go1.12.5",
         "template_key": "GO_VERSION"
     },
     "docker-cloud-tools": {
