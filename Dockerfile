@@ -1,12 +1,13 @@
 FROM ubuntu:bionic
 
-LABEL version="18"
+LABEL version="19"
 
 ENV color_prompt yes
 ENV SHELL /bin/bash
 ENV TERM xterm-color
 ENV NO_PROXY 127.0.0.1
 ENV no_proxy 127.0.0.1
+
 
 RUN apt-get update -q
 RUN apt-get install apt-utils locales iputils-ping iputils-arping iputils-tracepath -y
@@ -41,10 +42,10 @@ RUN cd /tmp && \
     cd /tmp/ansible && python setup.py build install && rm -rf /tmp/ansible
 
 
-# Installing Latest Hashicorp Terraform (v0.12.0)
-RUN curl -s https://releases.hashicorp.com/terraform/0.12.0/terraform_0.12.0_linux_amd64.zip > terraform_0.12.0_linux_amd64.zip && \
-    unzip terraform_0.12.0_linux_amd64.zip -d /bin && \
-    rm -f terraform_0.12.0_linux_amd64.zip
+# Installing Latest Hashicorp Terraform (v0.12.1)
+RUN curl -s https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip > terraform_0.12.1_linux_amd64.zip && \
+    unzip terraform_0.12.1_linux_amd64.zip -d /bin && \
+    rm -f terraform_0.12.1_linux_amd64.zip
 
 
 # Installing Latest Hashicorp Packer (v1.4.1)
